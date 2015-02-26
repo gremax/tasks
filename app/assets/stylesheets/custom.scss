@@ -24,3 +24,17 @@ h1 {
   text-align: center;
   padding-bottom: 20px;
 }
+
+.options {
+   position: absolute;
+   right: 5px;
+   top: 5px;
+}
+
+label[for='task_done'] {
+  font-weight: normal;
+}
+
+.completed {
+  text-decoration: line-through;
+}
