@@ -1,7 +1,19 @@
+body {
+  background: url('https://dl.dropboxusercontent.com/u/486403/web/rails/bg3.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 h1 {
   text-transform: uppercase;
   text-align: center;
   padding-bottom: 0.7em;
+}
+
+.panel-heading {
+  font-size: 1.3em;
 }
 
 .new-task {
