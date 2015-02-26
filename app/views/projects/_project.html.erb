@@ -9,6 +9,7 @@
         <div class="col-xs-12">
           <div class="input-group">
             <div class="input-group-addon"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></div>
+            <%= hidden_field_tag(:project_id, project.id) %>
             <%= f.text_field :name, class: "form-control" %>
             <div class="input-group-btn">
               <%= f.submit class: "btn btn-success" %>
