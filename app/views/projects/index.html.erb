@@ -1,17 +1,12 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <% @projects.each do |project| %>
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-          <%= project.name %>
-        </div>
-      <ul class="list-group">
-        <% project.tasks.each do |task| %>
-          <li class="list-group-item"><%= task.name %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
+    <%= render @projects %>
+    <div class="new-project">
+      <%= link_to new_project_path, class: "btn btn-primary btn-lg",
+                                    id: "new_link", remote: true do %>
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      Add TODO List
+      <% end%>
+    </div>
   </div>
 </div>
