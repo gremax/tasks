@@ -25,6 +25,11 @@
     <% end %>
   </div>
   <div class="list-group">
-    <%= render project.tasks %>
+    <div id="incomplete_tasks">
+      <%= render project.tasks.incomplete %>
+    </div>
+    <div id="complete_tasks">
+      <%= render project.tasks.complete %>
+    </div>
   </div>
 </div>

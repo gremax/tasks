@@ -5,7 +5,7 @@
       <%= f.submit "Update" %>
     </div>
     <div class="div-label">
-      <%= f.label :done, task.name %>
+      <%= f.label :done, task.name, class: "#{task.done? ? 'complete' : ''}" %>
     </div>
     <div class="div-options">
       <%= render 'tasks/options', task: task %>

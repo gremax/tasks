@@ -67,8 +67,12 @@ label[for='task_done'] {
   max-width: 76%;
 }
 
-.completed {
+.complete {
   text-decoration: line-through;
+}
+
+.incomplete {
+  text-decoration: none;
 }
 
 .div-check {
