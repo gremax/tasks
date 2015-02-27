@@ -21,3 +21,9 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'guard-bundler'
 end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+  gem 'puma'
+end
