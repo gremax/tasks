@@ -1,0 +1,2 @@
+$('#project_<%= @task.project.id %> #incomplete_tasks').append('<%= j render(@task) %>');
+$('#edit_task_<%= @task.id %>').submitOnCheck();

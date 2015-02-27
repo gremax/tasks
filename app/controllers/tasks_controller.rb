@@ -5,11 +5,10 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     @task.project_id = params[:project_id]
-    if @task.save
-      redirect_to projects_path
-    else
-      flash[:warning] = "The form can't be blank."
-      redirect_to projects_path
+    @task.save
+    respond_to do |format|
+      format.html { redirect_to projects_path }
+      format.js
     end
   end
 
