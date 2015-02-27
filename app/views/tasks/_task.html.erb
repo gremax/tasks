@@ -1,9 +1,13 @@
 <%= form_for task, remote: true do |f| %>
-  <div class="list-group-item">
-    <%= f.check_box :done %>
-    <%= f.submit "Update" %>
-    <%= f.label :done, task.name %>
-    <div class="options">
+  <div class="list-group-item task">
+    <div class="div-check">
+      <%= f.check_box :done %>
+      <%= f.submit "Update" %>
+    </div>
+    <div class="div-label">
+      <%= f.label :done, task.name %>
+    </div>
+    <div class="div-options">
       <%= render 'tasks/options', task: task %>
     </div>
   </div>

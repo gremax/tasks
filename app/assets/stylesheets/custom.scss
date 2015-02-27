@@ -16,6 +16,25 @@ h1 {
   font-size: 1.3em;
 }
 
+.div-project-name {
+  display:inline;
+}
+
+.div-project-options {
+  display: none;
+  float: right;
+  a {
+    color: #fff;
+    &:hover {
+      color: #ccc;
+    }
+  }
+}
+
+.panel-heading:hover .div-project-options {
+  display: inline;
+}
+
 .new-task {
   padding: 3px;
 }
@@ -25,16 +44,39 @@ h1 {
   padding-bottom: 20px;
 }
 
-.options {
-   position: absolute;
-   right: 5px;
-   top: 5px;
+.task .div-options {
+   display: none;
+   float: right;
+   font-size: 1.2em;
+}
+
+.task:hover {
+    background-color: #f5f5f5;
+}
+
+.task:hover .div-options {
+  display: inline;
+}
+
+input[type='checkbox'] {
+  vertical-align: top;
 }
 
 label[for='task_done'] {
   font-weight: normal;
+  max-width: 76%;
 }
 
 .completed {
   text-decoration: line-through;
+}
+
+.div-check {
+  display: inline;
+  padding: 0 10px 5px 3px;
+}
+
+.div-label {
+  display: inline;
+  padding: 0 0 0 5px;
 }

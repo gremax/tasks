@@ -10,7 +10,7 @@ Task.create!([
   { name: "Attentively check the file", project_id: first.id },
   { name: "Write HTML & CSS", project_id: first.id },
   { name: "Add Javascript to implement adding / editing/ removing for todo items and lists taking into account as more use cases as possible", project_id: first.id },
-  { name: "Buy milk", project_id: second.id },
+  { name: "Buy a milk", project_id: second.id },
   { name: "Call Mom", project_id: second.id },
   { name: "Clean the room", project_id: second.id },
   { name: "Repair the DVD Player", project_id: second.id },

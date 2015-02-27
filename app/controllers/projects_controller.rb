@@ -9,9 +9,19 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new(project_params)
-    if @project.save
-      redirect_to projects_path
+    @project = Project.create(project_params)
+    @task = Task.new
+    respond_to do |format|
+      format.html { redirect_to projects_path }
+      format.js
+    end
+  end
+
+  def destroy
+    @project = Project.destroy(params[:id])
+    respond_to do |format|
+      format.html { redirect_to projects_path }
+      format.js
     end
   end
 
