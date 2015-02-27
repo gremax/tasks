@@ -4,6 +4,14 @@ class ProjectsController < ApplicationController
     @task = Task.new
   end
 
+  def show
+    @project = Project.find_by_id(params[:id])
+    respond_to do |format|
+      format.html { redirect_to projects_path }
+      format.js
+    end
+  end
+
   def new
     @project = Project.new
   end
