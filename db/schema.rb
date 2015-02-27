@@ -22,12 +22,12 @@ ActiveRecord::Schema.define(version: 20150226074450) do
   add_index "projects", ["name"], name: "index_projects_on_name"
 
   create_table "tasks", force: :cascade do |t|
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.text     "name",       limit: 1000
     t.integer  "priority"
     t.datetime "deadline"
-    t.boolean  "done"
+    t.boolean  "done",                    default: false
     t.integer  "project_id"
   end
 

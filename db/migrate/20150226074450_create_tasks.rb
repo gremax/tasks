@@ -5,7 +5,7 @@ class CreateTasks < ActiveRecord::Migration
       t.text :name, limit: 1000
       t.integer :priority
       t.datetime :deadline
-      t.boolean :done
+      t.boolean :done, default: 'f'
       t.references :project
     end
     add_index :tasks, :name
