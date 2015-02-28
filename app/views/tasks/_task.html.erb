@@ -1,11 +1,12 @@
 <%= form_for task, remote: true do |f| %>
-  <div class="list-group-item task">
+  <div class="list-group-item task" data-task-id="<%= task.id %>">
     <div class="div-check">
-      <%= f.check_box :done %>
+      <%= f.check_box :done, id: "task_complete_#{task.id}" %>
       <%= f.submit "Update" %>
     </div>
     <div class="div-label">
-      <%= f.label :done, task.name, class: "#{task.done? ? 'complete' : ''}" %>
+      <%= f.label "complete_#{task.id}", task.name,
+            class: "task-label #{task.done? ? 'complete' : ''}" %>
     </div>
     <div class="div-options">
       <%= render 'tasks/options', task: task %>
