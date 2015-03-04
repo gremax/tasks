@@ -6,7 +6,7 @@
     </div>
     <div class="div-label">
       <%= f.label "complete_#{task.id}", task.name,
-            class: "task-label #{task.done? ? 'complete' : ''}" %>
+            class: "task-label#{' complete' if task.done?}" %>
     </div>
     <div class="div-options">
       <%= render 'tasks/options', task: task %>
