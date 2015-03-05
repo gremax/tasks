@@ -16,6 +16,16 @@ h2 {
   text-align: center;
 }
 
+.profile {
+  position: absolute;
+  padding: 4px;
+  top: 0;
+  left: 0;
+  p {
+    margin: 0;
+  }
+}
+
 .panel-heading {
   font-size: 1.3em;
 }

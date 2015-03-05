@@ -7,6 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% if logged_in? %>
+  <div class="profile">
+    <p><b><%= current_user.email %></b></p>
+    <p><%= link_to "Sign out", signout_path, method: :delete %></p>
+  </div>
+<% end %>
 <h1>Simple Todo Lists</h1>
 
 <% unless flash.empty? %>
