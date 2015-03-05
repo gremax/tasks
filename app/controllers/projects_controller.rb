@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_action :authenticate_user
 
   def index
-    @projects = Project.all
+    @projects = current_user.projects
     @task = Task.new
   end
 
@@ -19,7 +19,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.create(project_params)
+    @project = current_user.projects.create(project_params)
     @task = Task.new
     respond_to do |format|
       format.html { redirect_to projects_path }

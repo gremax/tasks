@@ -1,9 +1,12 @@
+User.destroy_all
 Task.destroy_all
 Project.destroy_all
 
-first  = Project.create!(name: "Complete the test task for Ruby Garage")
-second = Project.create!(name: "For Home")
-third  = Project.create!(name: "Learn Ruby")
+user = User.create!(email: "user@example.com",password: "password", password_confirmation: "password")
+
+first  = Project.create!(name: "Complete the test task for Ruby Garage", user_id: user.id)
+second = Project.create!(name: "For Home", user_id: user.id)
+third  = Project.create!(name: "Learn Ruby", user_id: user.id)
 
 Task.create!([
   { name: "Open this mock-up in Adobe Fireworks", project_id: first.id },
@@ -19,4 +22,4 @@ Task.create!([
   { name: "PostgreSQL", project_id: third.id }
 ])
 
-p "Added #{Project.count} projects with #{Task.count} tasks."
+p "Added #{Project.count} projects with #{Task.count} tasks for #{user.email}"
