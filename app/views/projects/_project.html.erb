@@ -2,7 +2,7 @@
   <div class="panel-heading">
     <div class="div-project-name">
       <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;
-      <%= project.name %>
+      <%= best_in_place project, :name, activator: "#edit_project_#{project.id}" %>
     </div>
     <div class="div-project-options">
       <%= render 'options', project: project %>
