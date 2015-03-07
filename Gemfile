@@ -10,6 +10,7 @@ gem 'jbuilder',     '~> 2.0'
 gem 'sdoc',         '~> 0.4.0', group: :doc
 gem 'bcrypt',       '~> 3.1.10'
 gem 'bootstrap-sass'
+gem 'client_side_validations', :git => 'https://github.com/DavyJonesLocker/client_side_validations.git'
 
 group :development, :test do
   gem 'sqlite3'

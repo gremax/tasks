@@ -7,6 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% flash.each do |key, value| %>
+  <div class="notify alert alert-<%= key %>" role="<%= key %>"><%= value %></div>
+<% end %>
+
 <% if logged_in? %>
   <div class="profile">
     <p><b><%= current_user.email %></b></p>
@@ -14,16 +18,6 @@
   </div>
 <% end %>
 <h1>Simple Todo Lists</h1>
-
-<% unless flash.empty? %>
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-      <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>" role="<%= key %>"><%= value %></div>
-      <% end %>
-    </div>
-  </div>
-<% end %>
 
 <div class="container">
   <%= yield %>

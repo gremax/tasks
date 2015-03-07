@@ -16,6 +16,12 @@ h2 {
   text-align: center;
 }
 
+.notify {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+}
+
 .profile {
   position: absolute;
   padding: 4px;
@@ -41,6 +47,7 @@ h2 {
     color: #fff;
     &:hover {
       color: #ccc;
+      text-decoration: none;
     }
   }
 }
@@ -62,6 +69,9 @@ h2 {
    display: none;
    float: right;
    font-size: 1.2em;
+   a:hover {
+     text-decoration: none;
+   }
 }
 
 .task:hover {
