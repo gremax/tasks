@@ -5,8 +5,10 @@
       <%= f.submit "Update" %>
     </div>
     <div class="div-label">
-      <%= f.label "complete_#{task.id}", task.name,
-            class: "task-label#{' complete' if task.done?}" %>
+      <%= f.label "complete_#{task.id}",
+            class: "task-label#{' complete' if task.done?}" do %>
+        <%= best_in_place task, :name, class: "highlight", activator: "#edit_inline_#{task.id}" %>
+      <% end %>
     </div>
     <div class="div-options">
       <%= render 'tasks/options', task: task %>

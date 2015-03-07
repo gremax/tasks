@@ -11,6 +11,7 @@ gem 'sdoc',         '~> 0.4.0', group: :doc
 gem 'bcrypt',       '~> 3.1.10'
 gem 'bootstrap-sass'
 gem 'client_side_validations', :git => 'https://github.com/DavyJonesLocker/client_side_validations.git'
+gem 'best_in_place', '~> 3.0.1'
 
 group :development, :test do
   gem 'sqlite3'

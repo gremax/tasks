@@ -14,10 +14,16 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find_by_id(params[:id])
-    @task.update_attributes(task_params)
+
     respond_to do |format|
-      format.html { redirect_to projects_path }
-      format.js
+      if @task.update_attributes(task_params)
+        format.html { redirect_to projects_path }
+        format.json { head :ok }
+        format.js
+      else
+        format.html { redirect_to projects_path }
+        format.json { respond_with_bip(@task) }
+      end
     end
   end
 
