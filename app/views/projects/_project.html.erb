@@ -25,10 +25,10 @@
     <% end %>
   </div>
   <div class="list-group">
-    <div id="incomplete_tasks">
+    <div class="incomplete_tasks" data-update-url="<%= sort_tasks_url %>">
       <%= render project.tasks.incomplete %>
     </div>
-    <div id="complete_tasks">
+    <div class="complete_tasks">
       <%= render project.tasks.complete %>
     </div>
   </div>

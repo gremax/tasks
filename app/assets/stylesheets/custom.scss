@@ -110,7 +110,11 @@ input[type='checkbox'] {
   padding: 0 0 0 5px;
 }
 
-#complete_tasks {
+.incomplete_tasks .handle {
+  cursor: move;
+}
+
+.complete_tasks {
   display: none;
 }
 

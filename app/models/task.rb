@@ -4,10 +4,10 @@ class Task < ActiveRecord::Base
   belongs_to :project
 
   def self.incomplete
-    where(done: false)
+    where(done: false).order('priority')
   end
 
   def self.complete
-    where(done: true)
+    where(done: true).order('updated_at')
   end
 end

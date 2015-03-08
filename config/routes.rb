@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root to: 'sessions#new'
   resources :projects
-  resources :tasks
+  resources :tasks do
+    collection { post :sort }
+  end
   resources :users
   get    'signup'  => 'users#new',        as: :signup
   get    'signin'  => 'sessions#new',     as: :signin

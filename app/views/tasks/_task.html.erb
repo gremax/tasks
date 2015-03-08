@@ -1,5 +1,5 @@
 <%= form_for task, remote: true do |f| %>
-  <div class="list-group-item task" data-task-id="<%= task.id %>">
+  <%= content_tag_for :div, task, class: "list-group-item task" do %>
     <div class="div-check">
       <%= f.check_box :done, id: "task_complete_#{task.id}" %>
       <%= f.submit "Update" %>
@@ -13,5 +13,5 @@
     <div class="div-options">
       <%= render 'tasks/options', task: task %>
     </div>
-  </div>
+  <% end %>
 <% end %>

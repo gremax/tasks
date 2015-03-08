@@ -9,3 +9,13 @@ jQuery.fn.submitOnCheck = function() {
 $(function() {
   $('.edit_task').submitOnCheck();
 });
+
+$(function() {
+  $('.incomplete_tasks').sortable({
+    axis: 'y',
+    handle: '.handle',
+    update: function() {
+      return $.post($(this).data('update-url'), $(this).sortable('serialize'));
+    }
+  });
+});

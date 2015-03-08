@@ -14,7 +14,6 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find_by_id(params[:id])
-
     respond_to do |format|
       if @task.update_attributes(task_params)
         format.html { redirect_to projects_path }
@@ -33,6 +32,13 @@ class TasksController < ApplicationController
       format.html { redirect_to projects_path }
       format.js
     end
+  end
+
+  def sort
+    params[:edit_task].each_with_index do |id, index|
+      Task.where(id: id).update_all({priority: index+1})
+    end
+    render nothing: true
   end
 
   private
