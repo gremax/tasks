@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: 'sessions#new'
-  resources :projects
+  resources :projects do
+    collection { post :sort }
+  end
   resources :tasks do
     collection { post :sort }
   end

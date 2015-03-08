@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_action :authenticate_user
 
   def index
-    @projects = current_user.projects
+    @projects = current_user.projects.order('priority')
     @task = Task.new
   end
 
@@ -46,6 +46,13 @@ class ProjectsController < ApplicationController
       format.html { redirect_to projects_path }
       format.js
     end
+  end
+
+  def sort
+    params[:project].each_with_index do |id, index|
+      Project.where(id: id).update_all({priority: index+1})
+    end
+    render nothing: true
   end
 
   private
