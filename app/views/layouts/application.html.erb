@@ -8,7 +8,7 @@
 </head>
 <body>
 <% flash.each do |key, value| %>
-  <div class="notify alert alert-<%= key %>" role="<%= key %>"><%= value %></div>
+  <div class="purr alert alert-<%= key %>" role="<%= key %>"><%= value %></div>
 <% end %>
 
 <% if logged_in? %>

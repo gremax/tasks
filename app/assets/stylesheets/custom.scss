@@ -1,3 +1,5 @@
+@import "bootstrap";
+
 body {
   background: url('https://dl.dropboxusercontent.com/u/486403/web/rails/bg3.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -14,12 +16,6 @@ h1 {
 
 h2 {
   text-align: center;
-}
-
-.notify {
-  position: fixed;
-  top: 1em;
-  right: 1em;
 }
 
 .profile {
@@ -87,6 +83,7 @@ input[type='checkbox'] {
 }
 
 .form-link {
+  font-size: 1.2em;
   text-align: right;
 }
 
@@ -120,7 +117,22 @@ input[type='checkbox'] {
 .best_in_place input {
   width: 250%;
 }
+
 .div-project-name .best_in_place input {
   color: #3a7ab5;
   width: 70%;
+}
+
+.purr {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 250px;
+  padding: 20px;
+  color: #896d3d;
+  font-weight: bold;
+  background-color: #fcf8e4;
+  border: solid 2px #f9ebcd;
+  border-radius: 5px;
+  &:first-letter { text-transform: uppercase };
 }
