@@ -13,8 +13,13 @@
 
 <% if logged_in? %>
   <div class="profile">
-    <p><b><%= current_user.email %></b></p>
-    <p><%= link_to "Sign out", signout_path, method: :delete %></p>
+    <div class="avatar">
+      <%= gravatar_for current_user %>
+    </div>
+    <div class="signout">
+      <p><b><%= current_user.email %></b></p>
+      <p><%= link_to "Sign out", signout_path, method: :delete %></p>
+    </div>
   </div>
 <% end %>
 <h1>Simple Todo Lists</h1>

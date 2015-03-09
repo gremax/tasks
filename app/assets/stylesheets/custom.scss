@@ -140,3 +140,15 @@ input[type='checkbox'] {
   border-radius: 5px;
   &:first-letter { text-transform: uppercase };
 }
+
+.avatar {
+  float: left;
+  img {
+    border-radius: 100%;
+  }
+}
+
+.signout {
+  margin-left: 8px;
+  float: right;
+}
