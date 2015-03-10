@@ -4,7 +4,7 @@ jQuery.fn.submitOnCheck = function() {
     $(this).parents('form').submit();
   });
   return this;
-}
+};
 
 $(function() {
   $('.edit_task').submitOnCheck();

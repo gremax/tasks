@@ -1,3 +1,11 @@
 $('#project_<%= @task.project.id %> #task_name').val('');
-$('#project_<%= @task.project.id %> .incomplete_tasks').append('<%= j render(@task) %>');
+$('#project_<%= @task.project.id %> .incomplete_tasks').prepend('<%= j render(@task) %>');
 $('#edit_task_<%= @task.id %>').submitOnCheck();
+$('.best_in_place').best_in_place();
+$('.incomplete_tasks').sortable({
+  axis: 'y',
+  handle: '.handle',
+  update: function() {
+    return $.post($(this).data('update-url'), $(this).sortable('serialize'));
+  }
+});

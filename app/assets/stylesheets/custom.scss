@@ -58,7 +58,7 @@ h2 {
 
 .new-project {
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .task .div-options {
@@ -88,9 +88,8 @@ input[type='checkbox'] {
 }
 
 .task-label {
-  width: 100%;
+  max-width: 76%;
   font-weight: normal;
-  margin-bottom: 0;
 }
 
 .complete {
@@ -119,8 +118,16 @@ input[type='checkbox'] {
   display: none;
 }
 
+.datepicker {
+  display: inline;
+}
+
 .best_in_place input {
-  width: 70%;
+  width: 250%;
+}
+
+.best_in_place input[name="deadline"] {
+  width: 150px;
 }
 
 .best_in_place span {

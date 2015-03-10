@@ -1,3 +1,4 @@
 $('#new_project').remove();
 $('#new_link').show();
 $('#all_projects').prepend('<%= j render(@project) %>');
+$('html, body').animate({ scrollTop: 0 }, 'slow');
