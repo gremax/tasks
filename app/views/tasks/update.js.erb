@@ -1,7 +1,8 @@
 <% if @task.done? %>
   $('#edit_task_<%= @task.id %>').appendTo('#project_<%= @task.project.id %> .complete_tasks');
-  $('#edit_task_<%= @task.id %> label').addClass('complete');
+  $('#edit_task_<%= @task.id %> #best_in_place_task_<%= @task.id %>_name').addClass('complete');
 <% else %>
   $('#edit_task_<%= @task.id %>').appendTo('#project_<%= @task.project.id %> .incomplete_tasks');
-  $('#edit_task_<%= @task.id %> label').removeClass('complete');
+  $('#edit_task_<%= @task.id %> #best_in_place_task_<%= @task.id %>_name').removeClass('complete');
 <% end %>
+

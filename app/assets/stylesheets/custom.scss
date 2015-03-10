@@ -71,7 +71,7 @@ h2 {
 }
 
 .task:hover {
-    background-color: #f5f5f5;
+    background-color: #fbfed7;
 }
 
 .task:hover .div-options {
@@ -88,8 +88,9 @@ input[type='checkbox'] {
 }
 
 .task-label {
+  width: 100%;
   font-weight: normal;
-  max-width: 76%;
+  margin-bottom: 0;
 }
 
 .complete {
@@ -119,7 +120,11 @@ input[type='checkbox'] {
 }
 
 .best_in_place input {
-  width: 250%;
+  width: 70%;
+}
+
+.best_in_place span {
+  max-width: 70%;
 }
 
 .div-project-name .best_in_place input {
@@ -151,4 +156,8 @@ input[type='checkbox'] {
 .signout {
   margin-left: 8px;
   float: right;
+  a {
+    color: #1d3e5d;
+    font-weight: bold;
+  }
 }

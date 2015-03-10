@@ -1,17 +1,17 @@
 <%= form_for task, remote: true do |f| %>
-  <%= content_tag_for :div, task, class: "list-group-item task" do %>
+  <%= f.label "complete_#{task.id}", class: "task-label" do %>
+  <%= content_tag_for :div, task, class: "list-group-item" do %>
     <div class="div-check">
       <%= f.check_box :done, id: "task_complete_#{task.id}" %>
       <%= f.submit "Update" %>
     </div>
     <div class="div-label">
-      <%= f.label "complete_#{task.id}",
-            class: "task-label#{' complete' if task.done?}" do %>
-        <%= best_in_place task, :name, activator: "#edit_inline_#{task.id}" %>
-      <% end %>
+      <%= best_in_place task, :name, activator: "#edit_inline_#{task.id}",
+                                     class: "#{' complete' if task.done?}" %>
     </div>
     <div class="div-options">
       <%= render 'tasks/options', task: task %>
     </div>
+  <% end %>
   <% end %>
 <% end %>
