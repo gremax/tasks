@@ -22,8 +22,11 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'database_cleaner'
   gem 'guard-rspec'
   gem 'guard-bundler'
+  gem 'factory_girl_rails'
 end
 
 group :production do
