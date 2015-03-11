@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature "User edits a project" do
+feature "User deletes a task" do
   before do
     user = FactoryGirl.create(:user) do |user|
       user.projects.create(attributes_for(:project))
@@ -10,15 +10,15 @@ feature "User edits a project" do
     fill_in "Password", with: user.password
     click_button "Login"
     expect(page).to have_content("Sign out")
+    expect(page).to have_content(user.email)
   end
 
-  scenario "Edit an exist project name", js: true do
+  scenario "Delete an exists task", js: true do
     project = Project.order(:created_at).last
     expect(page).to have_content("Learn Ruby")
     find("#project_#{project.id}").hover
-    find("#edit_project_#{project.id}").click
-    bip_area project, :name, "Learn RoR"
-    # pring page.html
-    # save_and_open_screenshot
+    find("#delete_project_#{project.id}").hover
+    find("#delete_project_#{project.id}").click
+    expect(page).to_not have_content("Learn Ruby")
   end
 end
