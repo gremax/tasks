@@ -7,8 +7,11 @@
     <div class="div-label">
       <%= f.label "complete_#{task.id}", class: "task-label#{' complete' if task.done?}" do %>
         <%= best_in_place task, :name, activator: "#edit_inline_#{task.id}" %>
+        <%= best_in_place(task, :deadline, activator: "#set_deadline_#{task.id}",
+                          type: :date, class: "datepicker",
+                          display_with: lambda { |dt| dt.strftime("%Y-%m-%d") if !dt.nil? }) %>
       <% end %>
-   </div>
+    </div>
     <div class="div-options">
       <%= render 'tasks/options', task: task %>
     </div>

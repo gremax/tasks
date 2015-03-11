@@ -19,3 +19,11 @@ $(function() {
     }
   });
 });
+
+$.datepicker.setDefaults(jQuery.extend(
+    $.datepicker.regional['nl'],
+    {
+      dateFormat: 'yy-mm-dd',
+      firstDay: 1
+    }
+));

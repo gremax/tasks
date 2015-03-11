@@ -88,7 +88,7 @@ input[type='checkbox'] {
 }
 
 .task-label {
-  max-width: 76%;
+  max-width: 70%;
   font-weight: normal;
 }
 
@@ -127,7 +127,8 @@ input[type='checkbox'] {
 }
 
 .best_in_place input[name="deadline"] {
-  width: 150px;
+  width: 1px;
+  height: 1px;
 }
 
 .best_in_place span {
@@ -167,4 +168,12 @@ input[type='checkbox'] {
     color: #1d3e5d;
     font-weight: bold;
   }
+}
+
+.datepicker {
+  font-weight: bold;
+}
+
+.ui-datepicker {
+  z-index: 9999 !important;
 }
